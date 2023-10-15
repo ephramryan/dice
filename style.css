@@ -1,0 +1,101 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.form_div {
+  border: 1px black solid;
+  width: 50vw;
+  padding: 1rem;
+  box-shadow: 0 10px 13px -7px rgba(0, 0, 0, 0.4), 0 0 5px 2px transparent;
+}
+
+.rolled_values-div {
+  border: 1px black solid;
+  width: 50vw;
+  padding: 1rem;
+  box-shadow: 0 10px 13px -7px rgba(0, 0, 0, 0.4), 0 0 5px 2px transparent;
+}
+
+.roll_statistics-div {
+  border: 1px black solid;
+  width: 50vw;
+  padding: 1rem;
+  box-shadow: 0 10px 13px -7px rgba(0, 0, 0, 0.4), 0 0 5px 2px transparent;
+}
+
+.dice_input_field {
+  border-radius: 20px;
+  background: lightgrey;
+  border: 2px black solid;
+}
+
+.dice_input_field:focus {
+  background: white;
+  border: blue 1px solid;
+}
+
+.roll_button {
+  border-radius: 20px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border: none;
+  box-shadow: 0 10px 13px -7px rgba(0, 0, 0, 0.4), 0 0 5px 2px transparent;
+  cursor: pointer;
+}
+
+.roll_button:hover {
+  cursor: pointer;
+  color: white;
+  background: black;
+}
+
+.dice {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #000;
+  font-size: 24px;
+  line-height: 30px;
+  vertical-align: top;
+  background-color: #f0f0f0; /* Light gray background */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow */
+  border-radius: 4px; /* Rounded corners for a softer look */
+  position: relative; /* Needed for pseudo-elements */
+  cursor: pointer;
+}
+
+.dice:hover {
+  transform: scale(1.05);
+}
+
+.dice::before,
+.dice::after {
+  content: "";
+  position: absolute;
+  background-color: #fff; /* White highlight color */
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  opacity: 0.5; /* Adjust opacity as needed */
+}
+
+.dice::before {
+  transform: translate(0, 0);
+  border-top-left-radius: 4px; /* Rounded corners for top left */
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3); /* Highlight shadow */
+}
+
+.dice::after {
+  transform: translate(5px, 5px);
+  border-bottom-right-radius: 4px; /* Rounded corners for bottom right */
+  box-shadow: 2px -2px 5px rgba(0, 0, 0, 0.3); /* Highlight shadow */
+}
+
